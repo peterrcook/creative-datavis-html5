@@ -20,8 +20,6 @@
     // Draw world
     drawGeoJSON(ctx, geojson, projection)
 
-
-    // Load the CSV and draw a rectangle for each earthquake
     d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
       _.each(csv, function(row, i) {
         var pt = projection([+row.longitude, +row.latitude]);

@@ -1,8 +1,6 @@
 (function() {
 
-  // Get the canvas element's context
-  var canvas = document.getElementById('canvas');
-  var ctx = canvas.getContext('2d');
+  var svg = Snap("svg");
 
   var yScale = d3.scale.linear().domain([0, 800]).range([0, 800]);
   var colorScale = d3.scale.linear().domain([2.5, 7]).range(['black', 'yellow']);
@@ -11,17 +9,25 @@
   d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
 
     // Vertical lines 
-    ctx.fillStyle = '#444';
     _.each(csv, function(row, i) {
       var y = yScale(+row.depth);
-      ctx.fillRect(i, 0, 1, y);
+      var l = svg.line(i, 0, i, y);
+      l.attr({
+        stroke: '#444'
+      });
     });
 
     // Circles to represent magnitude
     _.each(csv, function(row, i) {
       var y = yScale(+row.depth);
-      ctx.fillStyle = colorScale(+row.mag);
-      drawCircle(ctx, i, y, radiusScale(+row.mag));
+      var c = svg.circle(i, y, radiusScale(+row.mag));
+      c.attr({
+        fill: colorScale(+row.mag)
+      });
+      c.data('d', row);
+      c.hover(function() {
+        console.log(this.data('d').place);
+      });
     });
   });
 

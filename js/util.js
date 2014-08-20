@@ -1,6 +1,5 @@
 // Drawing
 function drawCircle(ctx, x, y, r) {
-  console.log(r);
   ctx.beginPath();
   ctx.arc(x, y, r, 0, 2 * Math.PI, false);
   ctx.fill();
