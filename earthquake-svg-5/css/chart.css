@@ -1,0 +1,18 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 800px;
+	margin: 0 auto;
+	font-size: 14px;
+  background-color: black;
+}
+
+line {
+  stroke: #00638F;
+}
+rect {
+  fill: #00638F;
+}
+text {
+  fill: #ccc;
+  font-size: 10px;
+}

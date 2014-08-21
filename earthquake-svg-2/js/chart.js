@@ -1,6 +1,11 @@
 (function() {
 
   var svg = Snap("svg");
+  var info = {
+    magnitude: svg.select('.info .magnitude'),
+    depth: svg.select('.info .depth'),
+    location: svg.select('.info .location')
+  };
 
   var yScale = d3.scale.linear().domain([0, 800]).range([0, 800]);
   var colorScale = d3.scale.linear().domain([2.5, 7]).range(['black', 'yellow']);
@@ -26,8 +31,13 @@
       });
       c.data('d', row);
       c.hover(function() {
-        console.log(this.data('d').place);
+        var d = this.data('d');
+        info.magnitude.node.textContent = 'Magnitude ' + d.mag;
+        info.depth.node.textContent = 'Depth ' + d.depth + 'km';
+        info.location.node.textContent = d.place;
       });
+
+
     });
   });
 
