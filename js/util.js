@@ -10,21 +10,21 @@ function drawGeoJSON(ctx, geojson, projection) {
 
   ctx.strokeStyle = '#666';
   ctx.lineWidth = '0.5';
-  _.each(geojson.features, function(feature) {
+  geojson.features.forEach(function(feature) {
     var geometry = feature.geometry;
     var polygons = [];
 
     if(geometry.type === 'Polygon')
       polygons.push(geometry.coordinates[0]);
     else if(geometry.type == 'MultiPolygon') {
-      _.each(geometry.coordinates, function(polygon) {
+      geometry.coordinates.forEach(function(polygon) {
         polygons.push(polygon[0]);
       });
     }
 
-    _.each(polygons, function(polygon) {
+    polygons.forEach(function(polygon) {
       ctx.beginPath();
-      _.each(polygon, function(pt) {
+      polygon.forEach(function(pt) {
         var pt = projection(pt);
         ctx.lineTo(pt[0], pt[1]);
       });

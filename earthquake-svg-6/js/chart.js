@@ -37,19 +37,19 @@
     annotations
       .append('text')
       .attr('x', function(d) {return magnitudeScale(+d.mag) + 5;})
-      .attr('y', 3.5)
+      .attr('y', 3.4)
       .text(function(d) {return +d.mag;});
 
     annotations
       .append('text')
       .attr('x', function(d) {return magnitudeScale(+d.mag) + 50;})
-      .attr('y', 3.5)
+      .attr('y', 3.4)
       .text(function(d) {return '(' + d.place + ')';});
 
     annotations
       .append('text')
       .attr('x', function(d) {return -depthScale(+d.depth) - 5;})
-      .attr('y', 3.5)
+      .attr('y', 3.4)
       .text(function(d) {return +d.depth + ' km';})
       .style('text-anchor', 'end');
   });

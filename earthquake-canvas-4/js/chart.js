@@ -21,7 +21,7 @@
     drawGeoJSON(ctx, geojson, projection)
 
     d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
-      _.each(csv, function(row, i) {
+      csv.forEach(function(row, i) {
         var pt = projection([+row.longitude, +row.latitude]);
         // Let's set area to magnitude and shade to depth
         ctx.fillStyle = colorScale(+row.depth);

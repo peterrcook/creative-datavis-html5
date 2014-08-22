@@ -14,7 +14,7 @@
   d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
 
     // Vertical lines 
-    _.each(csv, function(row, i) {
+    csv.forEach(function(row, i) {
       var y = yScale(+row.depth);
       var l = svg.line(i, 0, i, y);
       l.attr({
@@ -23,7 +23,7 @@
     });
 
     // Circles to represent magnitude
-    _.each(csv, function(row, i) {
+    csv.forEach(function(row, i) {
       var y = yScale(+row.depth);
       var c = svg.circle(i, y, radiusScale(+row.mag));
       c.attr({

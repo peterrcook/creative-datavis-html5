@@ -12,13 +12,13 @@
 
     // Vertical lines 
     ctx.fillStyle = '#444';
-    _.each(csv, function(row, i) {
+    csv.forEach(function(row, i) {
       var y = yScale(+row.depth);
       ctx.fillRect(i, 0, 1, y);
     });
 
     // Circles to represent magnitude
-    _.each(csv, function(row, i) {
+    csv.forEach(function(row, i) {
       var y = yScale(+row.depth);
       ctx.fillStyle = colorScale(+row.mag);
       drawCircle(ctx, i, y, radiusScale(+row.mag));

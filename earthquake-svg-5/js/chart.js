@@ -10,7 +10,7 @@
   d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
     csv.reverse();
 
-    _.each(csv, function(row, i) {
+    csv.forEach(function(row, i) {
       var y = i * (barWidth + 1) + 1;
 
       // Line (for depth)

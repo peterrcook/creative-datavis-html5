@@ -18,7 +18,7 @@
     });
 
     // Circles to represent magnitude
-    _.each(csv, function(row, i) {
+    csv.forEach(function(row, i) {
       var y = yScale(+row.depth);
       var c = svg.circle(i, y, radiusScale(+row.mag));
       c.attr({

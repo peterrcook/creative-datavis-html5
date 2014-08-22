@@ -18,7 +18,7 @@
     drawPolarDayGrid(ctx, 360);
 
     // Draw earthquakes
-    _.each(csv, function(row, i) {
+    csv.forEach(function(row, i) {
       ctx.fillStyle = colorScale(+row.depth);
       var t = new Date(row.time);
       var r = orbitRadiusScale(t);
