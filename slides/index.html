@@ -89,13 +89,47 @@
 				</section>
 
 				<section>
-					<h3>What will we be covering?</h3>
-					<ul>
-						<li>loading csv data into browser</li>
-						<li>canvas element</li>
-						<li>SVG</li>
-						<li>data-driven drawing in the browser</li>
-						</ul>
+					<section>
+						<h3>What will we be covering?</h3>
+						<ul>
+							<li>loading csv data into browser</li>
+							<li>canvas element</li>
+							<li>SVG</li>
+							<li>data-driven drawing in the browser</li>
+							</ul>
+					</section>
+
+					<section>
+						<h3>The dataset</h3>
+						<p>30 days of earthquake data</p>
+						<p>Source: http://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php</p>
+					</section>
+
+					<section>
+						<h3>Earthquake depth</h3>
+						<img src="img/eq-canvas-1.jpg">
+					</section>
+
+					<section>
+						<h3>Earthquake depth &amp; magnitude</h3>
+						<img src="img/eq-canvas-3.jpg">
+					</section>
+
+					<section>
+						<h3>Earthquake map</h3>
+						<img src="img/eq-canvas-4.jpg">
+					</section>
+
+					<section>
+						<h3>Earthquake spiral</h3>
+						<img src="img/eq-canvas-6.jpg">
+					</section>
+
+					<section>
+						<h3>Earthquake chart</h3>
+						<img src="img/eq-svg-6.jpg">
+					</section>
+
 				</section>
 
 				<section>
@@ -216,21 +250,115 @@ svg.selectAll('circle')
 });
 </code></pre>
 					</section>
+  			</section>
 
+  		<section>
+  			<h3>Technology overview</h3>
+  			<p>Use D3 to load CSV</p>
+  			<p>Use D3's scale functions</p>
+  			<p>JavaScript for Canvas</p>
+  			<p>Snap.SVG or D3 for SVG</p>
+  		</section>
 
-
+			<section>
+				<section>
+					<h2>Canvas visualisations</h2>
 				</section>
-
-
 
 				<section>
-					<h3>Visualisation: the Good, the Bad &amp; the Ugly</h3>
-					<p>22nd July 7.30pm</p>
-					<p>The Skiff, Brighton</p>
-					<p>@datavisbrighton</p>
+					<h3>1 - Getting started</h3>
+					<img src="img/eq-canvas-1.jpg">
+					<p>Use D3 to load earthquake CSV data</p>
+					<!-- <p>D3 transforms the CSV into an array of objects</p> -->
+					<p>Loop through resulting array and draw a rectangle for each earthquake</p>
 				</section>
 
-			</div>
+				<section>
+					<h3>2 - D3 scales</h3>
+					<p>Use D3 scale functions</p>
+				</section>
+
+				<section>
+					<h3>3 - Lines and Circles</h3>
+					<img src="img/eq-canvas-3.jpg">
+					<p>depth on y-axis</p>
+					<p>magnitude as circle area</p>
+					<p>sequence on x-axis</p>
+				</section>
+	
+				<section>
+					<h3>4 - Geo</h3>
+					<img src="img/eq-canvas-4.jpg">
+					<p>Use D3 to project lat/lon</p>
+				</section>
+
+				<section>
+					<h3>5 - Animated Geo</h3>
+					<p>Use setTimeout to sequence circle drawing</p>
+				</section>
+
+				<section>
+					<h3>6 - Spiral</h3>
+					<img src="img/eq-canvas-6.jpg">
+					<p>Arrange circles in spiral</p>
+				</section>
+			</section>
+
+
+			<section>
+				<section>
+					<h2>SVG visualisations</h2>
+				</section>
+
+				<section>
+					<h3>1 - Lines and Circles</h3>
+					<img src="img/eq-canvas-3.jpg">
+					<p>Use Snap.SVG to draw lines and circles</p>
+					<p>Still using D3 scales</p>
+				</section>
+
+				<section>
+					<h3>2 - Interaction</h3>
+					<p>Add hover event handler to circles</p>
+				</section>
+
+				<section>
+					<h3>3 - D3</h3>
+					<p>Use D3 to bind data to circles and lines</p>
+				</section>
+	
+				<section>
+					<h3>4 - D3 transitions</h3>
+					<p>Use D3 to animate lines and circles</p>
+				</section>
+
+				<section>
+					<h3>5 - Bars and Lines</h3>
+					<p>Use bars to represent magnitude</p>
+					<p>Use lines to represent depth</p>
+					<p>Using Snap.SVG</p>
+				</section>
+
+				<section>
+					<h3>6 - Bars and Lines</h3>
+					<img src="img/eq-svg-6.jpg">
+					<p>Using D3</p>
+					<p>Interaction</p>
+				</section>
+			</section>
+
+			<section>
+				<h3>Sum up</h3>
+				<p>Canvas for dense, non-interactive visualisations</p>
+				<p>SVG for interactive</p>
+				<p>Recommend D3 for scales, CSV and non-trivial SVG</p>
+			</section>
+
+			<section>
+				<h3>Thank you!</h3>
+				<p>Please tell others about this workshop</p>
+				<p>@animateddata</p>
+			</section>
 
 		</div>
 

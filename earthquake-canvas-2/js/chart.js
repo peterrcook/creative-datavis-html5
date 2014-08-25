@@ -11,6 +11,8 @@
 
   // Load the CSV and draw a rectangle for each earthquake
   d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
+    csv.reverse();
+
     csv.forEach(function(row, i) {
       ctx.fillRect(i, 600, 1, -yScale(+row.mag));
     });

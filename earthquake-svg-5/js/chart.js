@@ -8,8 +8,6 @@
   var barWidth = 5;
 
   d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
-    csv.reverse();
-
     csv.forEach(function(row, i) {
       var y = i * (barWidth + 1) + 1;
 

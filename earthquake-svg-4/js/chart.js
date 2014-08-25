@@ -11,6 +11,8 @@
   var radiusScale = d3.scale.sqrt().domain([2.5, 7]).range([0, 15]);
 
   d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
+    csv.reverse();
+
     var lines = d3.select('svg')
       .selectAll('line')
       .data(csv)

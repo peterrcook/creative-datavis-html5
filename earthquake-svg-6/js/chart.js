@@ -7,8 +7,6 @@
   var barWidth = 5;
 
   d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
-    csv.reverse();
-
     var groups = svg.selectAll('g')
       .data(csv)
       .enter()
