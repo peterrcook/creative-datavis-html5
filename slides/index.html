@@ -82,21 +82,18 @@
 					<p>Scalable Vector Graphics (SVG) - markup for graphics</p>
 				</section>
 
+
+
 				<section>
-					<h3>What will we be covering?</h3>
-					<ul>
-						<li>loading csv data into browser</li>
-						<li>canvas element</li>
-						<li>SVG</li>
-						<li>data-driven drawing in the browser</li>
-						</ul>
+					<h3>What will we be making?</h3>
 				</section>
 
 				<section>
-					<h3>The dataset</h3>
+					<h3>Visualisations based on...</h3>
 					<p>30 days of earthquake data</p>
 					<p>Source: http://earthquake.usgs.gov/earthquakes/feed/v1.0/csv.php</p>
 				</section>
+
 
 				<section>
 					<h3>Earthquake depth</h3>
@@ -123,11 +120,29 @@
 					<img src="img/eq-svg-6.jpg">
 				</section>
 
+
+
+				<section>
+					<h3>How will we do this?</h3>
+						<p>Load CSV data into the browser</p>
+						<p>Draw shapes based on the data using:</p>
+						<p>canvas element or SVG</p>
+				</section>
+
 				<section>
 					<h3>Caveats</h3>
 					<p>I'm presenting a few different approaches</p>
 					<p>Not necessarily recommended for production, but good for learning the basics</p>
 				</section>
+
+			<section>
+				<h3>Creative data visualisation - process</h3>
+				<p>Start with questions</p>
+				<p>Think how your data can be transformed into graphical elements (e.g. shape, size, position, angle, colour) to answer your questions</p>
+				<p>This process can be done on paper!</p>
+			</section>
+
+
 
 				<section>
 					<h2>The technology</h2>
@@ -140,7 +155,7 @@
 					<p>A bit like painting on a canvas... hence the name</p>
 				</section>
 
-				<section>
+<!-- 				<section>
 					<img src="img/canvas.jpg">
 					<p>HTML</p>
 					<pre><code>&lt;canvas id="canvas" width="600" height="600"&gt;&lt;/canvas&gt;</code></pre>
@@ -152,6 +167,8 @@ ctx.fillStyle = 'yellow';
 ctx.fillRect(20, 20, 200, 100);</code></pre>
 				</section>
 
+ -->
+
 				<section>
 					<h3>SVG</h3>
 					<p>Markup for graphics (e.g. rectangles, circles, lines, curves)</p>
@@ -160,25 +177,25 @@ ctx.fillRect(20, 20, 200, 100);</code></pre>
 					<p>Better for accessibility</p>
 				</section>
 
-				<section>
+<!-- 				<section>
 					<img src="img/canvas.jpg">
 					<p>HTML</p>
 					<pre><code>&lt;svg width="600" height="600"&gt;
-&lt;rect x="20" y="20" width="200" height="100"&gt;&lt;/rect&gt;
+  &lt;rect x="20" y="20" width="200" height="100"&gt;&lt;/rect&gt;
 &lt;/svg&gt;</code></pre>
 					<p>CSS</p>
 					<pre><code>rect {
-fill: yellow;
+  fill: yellow;
 }</code></pre>
 				</section>
-
+ -->
 				<section>
 					<h3>Snap.svg</h3>
 					<p>A JavaScript library for adding, removing and manipulating SVG elements</p>
 					<p>(Successor of Raphaël.js)</p>
 				</section>
 
-				<section>
+<!-- 				<section>
 					<img src="img/canvas.jpg">
 					<p>HTML</p>
 					<pre><code>&lt;svg width="600" height="600"&gt;&lt;/svg&gt;</code></pre>
@@ -190,16 +207,17 @@ l.attr({
 });
 </code></pre>
 				</section>
-
+ -->
 
 				<section>
 					<h3>D3.js</h3>
 					<p>A JavaScript library for adding, removing and manipulating DOM elements</p>
 					<p>Data-driven</p>
 					<p>Also contains many functions useful for data visualisation</p>
+					<p>e.g. loading data &amp; scale functions</p>
 				</section>
 
-				<section>
+<!-- 				<section>
 					<img src="img/d3.jpg">
 					<p>HTML</p>
 					<pre><code>&lt;svg width="600" height="600"&gt;&lt;/svg&gt;</code></pre>
@@ -215,15 +233,15 @@ svg.selectAll('circle')
   .attr('cx', function(d, i) {return i * 100;});
 </code></pre>
 				</section>
+ -->
 
-
-				<section>
+<!-- 				<section>
 					<h3>Data</h3>
 					<p>We'll be loading in Comma Separated Value (CSV) data using D3</p>
 					<p>Just as easy to load TSV &amp; JSON</p>
 				</section>
-
-				<section>
+ -->
+<!-- 				<section>
 					<img src="img/d3.jpg">
 					<p>HTML</p>
 					<pre><code>&lt;svg width="600" height="600"&gt;&lt;/svg&gt;</code></pre>
@@ -240,14 +258,23 @@ svg.selectAll('circle')
 });
 </code></pre>
 				</section>
-
-  		<section>
+ -->
+<!--   		<section>
   			<h3>This Workshop</h3>
   			<p>Use D3 to load CSV</p>
   			<p>Use D3's scale functions</p>
   			<p>JavaScript for Canvas</p>
   			<p>Snap.SVG or D3 for SVG</p>
   		</section>
+ -->
+
+ 			<section>
+ 				<h3>More info</h3>
+ 				<p>Canvas: <a href="http://www.nihilogic.dk/labs/canvas_sheet/HTML5_Canvas_Cheat_Sheet.pdf">cheat sheet</a> &amp; <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Canvas_tutorial">Canvas Tutorial</a> by MDN</p>
+ 				<p>SVG: <a href="http://www.w3.org/TR/SVG/">W3C Recommendation</a> &amp; <a href="https://developer.mozilla.org/en-US/docs/Web/SVG">SVG docs</a> by MDN</p>
+ 				<p><a href="http://snapsvg.io/docs/">Snap.SVG docs</a></p>
+ 				<p><a href="https://github.com/mbostock/d3/wiki/API-Reference">D3 docs</a> &amp; <a href="http://chimera.labs.oreilly.com/books/1230000000345/">Interactive Data Visualization</a> (Scott Murray)</p>
+ 			</section>
 
 			<section>
 				<h2>Canvas visualisations</h2>
@@ -292,6 +319,8 @@ svg.selectAll('circle')
 			</section>
 
 
+
+
 			<section>
 				<h2>SVG visualisations</h2>
 			</section>
@@ -332,12 +361,14 @@ svg.selectAll('circle')
 				<p>Interaction</p>
 			</section>
 
+
 			<section>
-				<h3>Sum up</h3>
+				<h3>Technology sum up</h3>
 				<p>Canvas for dense, non-interactive visualisations</p>
 				<p>SVG for interactive</p>
 				<p>Recommend D3 for scales, CSV and non-trivial SVG</p>
 			</section>
+
 
 			<section>
 				<h3>Thank you!</h3>
