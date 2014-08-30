@@ -1,0 +1,30 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 1000px;
+	margin: 0 auto;
+	font-size: 14px;
+  background-color: black;
+}
+
+line {
+  stroke: #00638F;
+}
+rect {
+  fill: #00638F;
+}
+.earthquake:hover rect {
+  fill: #70D3FF;
+}
+.earthquake:hover line {
+  stroke: #70D3FF;
+}
+text {
+  fill: #ccc;
+  font-size: 10px;
+}
+.annotation text {
+  display: none;
+}
+.earthquake:hover .annotation text {
+  display: block;
+}

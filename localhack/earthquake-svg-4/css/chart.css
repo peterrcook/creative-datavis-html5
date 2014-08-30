@@ -1,0 +1,22 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 1200px;
+	margin: 0 auto;
+	font-size: 14px;
+  background-color: black;
+}
+
+.info {
+  fill: white;
+  opacity: 0.6;
+}
+.info .magnitude {
+  font-size: 18px;
+}
+.info .depth {
+  font-size: 18px;
+}
+.info .location {
+  font-size: 12px;
+  /*text-anchor: end;*/
+}
