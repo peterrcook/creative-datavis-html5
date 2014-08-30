@@ -15,14 +15,16 @@
     .scale(200)
     .translate([480, 425]);
 
-
+  // Nicer to use something like queue.js here
   d3.json('../data/countries.geo.json', function(err, geojson) {
     // Draw world
     drawGeoJSON(ctx, geojson, projection)
 
     d3.csv('../data/earthquakes-30days-2.5.csv', function(err, csv) {
       csv.forEach(function(row, i) {
+
         var pt = projection([+row.longitude, +row.latitude]);
+
         // Let's set area to magnitude and shade to depth
         ctx.fillStyle = colorScale(+row.depth);
         drawCircle(ctx, pt[0], pt[1], radiusScale(+row.mag));

@@ -14,7 +14,11 @@
     csv.reverse();
 
     csv.forEach(function(row, i) {
-      ctx.fillRect(i, 600, 1, -yScale(+row.mag));
+      var x = i;
+      var y = 600;
+      var width = 1;
+      var height = -yScale(+row.mag);
+      ctx.fillRect(x, y, width, height);
     });
   });
 
